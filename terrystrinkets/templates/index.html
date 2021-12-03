@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<!--Jumbotron for Hero Section -->
+<div class="jumbotron" style="background-image: url(../static/images/DND_shop_4.jpg); height: 100vh; min-height: 700px; background-size: cover; background-repeat: no-repeat" alt="background image">
+    <div" class="row justify-content-center mt-2">
+        <div class="col-sm-6">
+            <h2 class="text-center px-3 mainheadtext">WELCOME ADVENTURER</h2>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block main %}
+     <!-- Contains the main content of the website, divided into sections -->
+
+        <body class="customtext2">
+            
+            <section>
+                <div class="container text-light">
+                    <div class="text-center">
+                        <div class="row justify-content-center pb-3 headingtext">
+                            <h4 class="py-1 px-4 textback">What is this wonderful place?</h4>
+                        </div>
+                    </div>
+                    <!-- CSS Grid -->
+                    <div class="row">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-6" style="color: black;">
+                            <article>
+                                <br>
+                                <p>Terry's is a one stop shop for any DND players looking to kit-out their avatar. 
+                                    The store provides a wide variety of wonderouse and affordable items for any heavy-pursed wanderer that finds their way here.
+                                </p>
+                                <ul>
+                                    <li>Do you have a DND character in need of some new equipment?</li>
+                                    <li>Find yourself with a little spare change?</li>
+                                    <li>You can browse the categories below or scroll up to search for anything in particular.</li>
+                                    <li>Have a complaint for Terry? Click <a href="complaint.html" class="body-link" style="font-style: italic; font-weight: bolder;">here</a> to let him know.</p>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="col-md-1">
+                            <article>
+                                <img class="img-fluid item img" src="../static/images/buyer1.png" alt="Customer">
+                            </article>
+                        </div>
+                    </div>
+                    <!-- Horizontal Rule -->
+                </div>
+            </section>
+            
+            <section class="collection">
+                <div class="container-fluid py-5">
+
+                    <div class="row justify-content-center pb-3 headingtext">
+                        <h4 class="py-1 px-4 textback">Categories</h4>
+                    </div>
+                    <div class="row">
+                        {% for category in categories%}
+                        <div class="col-md-3 pb-3">
+                            <div class="card py-1 px-2">
+                                <img src="{{url_for('static', filename='images/'+category.image)}}" class="image-fluid mb-3 card-img-top zoom cardborder" alt="Card image">
+                                <h5><a href="{{ url_for('main.armour', categoryid=category.id) }}" class="body-link" >{{category.name}}</a></h5>
+                                <p><small>{{category.description}}</small></p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+{% endblock %}

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="My Travel App">
+
+    <!-- Bootstrap Required Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Terry's Trinkets and Treasurables</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/Assignment2CSS.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark customtext1">
+            <a class="navbar-brand text-light pl-3">Terry's Trinkets and Treasurables</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse ml-2" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categories
+                        <span class="sr-only">(current)</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item active" href="#">Armour</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Weapons</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Magical Items</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Tools</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign In</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cart</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2 customtext1" type="search" placeholder="Please, peruse..." aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 castcolor" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <!--Jumbotron for Hero Section -->
+        <div class="jumbotron" style="background-image: url(../static/images/DND_background_2.1.jpg); height: 100vh; min-height: 800px; background-size: cover; background-repeat: no-repeat" alt="background image">
+            <div class="row justify-content-center mt-2">
+                <div class="col-sm-4">
+                    <h2 class="text-center px-3 mainheadtext">ARMOURER</h2>
+                </div>
+            </div>
+        </div> <!-- hero section -->
+
+    </header>
+
+     <!-- Contains the main content of the website, divided into sections -->
+    <main>
+        <body class="customtext2">
+            <section>
+                <div class="row justify-content-left py-3 pl-4 headingtext" style="max-width: 95vw;">
+                    <h4 class="py-1 px-4 textback">Light Armour</h4>
+                </div>
+                    
+                <div class="textborder">
+                    <div id="myCarousel1" class="carousel slide col-sm-6 textborder" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel1" data-slide-to="1"></li>
+                            <li data-target="#myCarousel1" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-50 item img" src="../static/images/armorpadded.png" alt="First slide">
+                                <div class="carousel-caption d-none d-sm-block">
+                                    <h5>Padded Armour</h5>
+                                    <p>Padded armour consists of quilted layers of cloth and batting.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-50 item img" src="../static/images/armorleather.png" alt="Second slide">
+                                <div class="carousel-caption d-none d-sm-block">
+                                    <h5>Leather Armour</h5>
+                                    <p>Some of this armour is made of leather that has been stiffened by being boiled in oil. The rest is made of softer and more flexible materials.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-50 item img" src="../static/images/armorstudded.png" alt="Third slide">
+                                <div class="carousel-caption d-none d-sm-block">
+                                    <h5>Studded Leather Armour</h5>
+                                    <p>Made from tough but flexible leather, studded leather is reinforced with close-set rivets or spikes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <article class="pl-3 pb-5">
+                    <table class="table py-3">
+                        <thead>
+                        <tr>
+                            <th scope="col">Armour</th>
+                            <th scope="col">Armour Class (AC)</th>
+                            <th scope="col">Strength</th>
+                            <th scope="col">Stealth</th>
+                            <th scope="col">Weight</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col">Add to Cart </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td scope="row">Padded Armour</td>
+                            <td>11 + Dex modifier</td>
+                            <td>-</td>
+                            <td>Disadvantage</td>
+                            <td>8 lb.</td>
+                            <td>5 gp</td>
+                            <td>
+                                <button type="button" class="btn btn-primary addtocart" data-toggle="modal" data-target="#Modal">
+                                    Add to cart
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Leather Armour</td>
+                            <td>11 + Dex modifier</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>10 lb.</td>
+                            <td>10 gp</td>
+                            <td>
+                                <button type="button" class="btn btn-primary addtocart" data-toggle="modal" data-target="#Modal">
+                                    Add to cart
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Studded Armour</td>
+                            <td>12 + Dex modifier</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>13 lb.</td>
+                            <td>45 gp</td>
+                            <td>
+                                <button type="button" class="btn btn-primary addtocart" data-toggle="modal" data-target="#Modal">
+                                    Add to cart
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+    
+                </article>
+
+            </section>
+
+
+
+            <section>
+                <div class="row justify-content-left py-3 pl-4 headingtext" style="max-width: 95vw;">
+                    <h4 class="py-1 px-4 textback">Medium Armour</h4>
+                </div>
+                    
+                    <div class="textborder">
+                        <div id="myCarousel2" class="carousel slide col-sm-6 textborder" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel2" data-slide-to="1"></li>
+                                <li data-target="#myCarousel2" data-slide-to="2"></li>
+                                <li data-target="#myCarousel2" data-slide-to="3"></li>
+                                <li data-target="#myCarousel2" data-slide-to="4"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-50 item img" src="../static/images/armorhide.png" alt="First slide">
+                                    <div class="carousel-caption d-none d-sm-block">
+                                        <h5>Hide Armour</h5>
+                                        <p>This crude armour consists of thick furs and pelts.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-50 item img" src="../static/images/armorchainshirt.png" alt="Second slide">
+                                    <div class="carousel-caption d-none d-sm-block">
+                                        <h5>Chain Shirt</h5>
+                                        <p>Made of interlocking metal rings, a chain shirt is worn between layers of clothing or leather. This armour offers modest protection to the wearer’s upper body.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-50 item img" src="../static/images/armorscale.png" alt="Third slide">
+                                    <div class="carousel-caption d-none d-sm-block">
+                                        <h5>Scale Armour</h5>
+                                        <p>This armour consists of a coat and leggings (and perhaps a separate skirt) of leather covered with overlapping pieces of metal, much like the scales of a fish.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-50 item img" src="../static/images/armorbreastplate.png" alt="Fourth slide">
+                                    <div class="carousel-caption d-none d-sm-block">
+                                        <h5>Breastplate Armour</h5>
+                                        <p>This armour consists of a fitted metal chest piece worn with supple leather. Although it leaves the legs and arms relatively unprotected, this armour provides good protection for the wearer’s vital organs.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-50 item img" src="../static/images/armorhalfplate.png" alt="Fifth slide">
+                                    <div class="carousel-caption d-none d-sm-block">
+                                        <h5>Half Plate Armour</h5>
+                                        <p>Half plate consists of shaped metal plates that cover most of the wearer’s body. It does not include leg protection beyond simple greaves that are attached with leather straps.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                <article class="pl-3">
+                    <table class="table py-3">
+                        <thead>
+                        <tr>
+                            <th scope="col">Armour</th>
+                            <th scope="col">Armour Class (AC)</th>
+                            <th scope="col">Strength</th>
+                            <th scope="col">Stealth</th>
+                            <th scope="col">Weight</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col">Add to Cart </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td scope="row">Hide Armour</td>
+                            <td>12 + Dex modifier</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>12 lb.</td>
+                            <td>10 gp</td>
+                            <td>
+                                <button type="button" class="btn btn-primary addtocart" data-toggle="modal" data-target="#Modal">
+                                    Add to cart
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Chain Shirt</td>
+                            <td>13 + Dex modifier</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>20 lb.</td>
+                            <td>50 gp</td>
+                            <td>
+                                <button type="button" class="btn btn-primary addtocart" data-toggle="modal" data-target="#Modal">
+                                    Add to cart
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Scale Armour</td>
+                            <td>14 + Dex modifier</td>
+                            <td>-</td>
+                            <td>Disadvantage</td>
+                            <td>45 lb.</td>
+                            <td>50 gp</td>
+                            <td>
+                                <button type="button" class="btn btn-primary addtocart" data-toggle="modal" data-target="#Modal">
+                                    Add to cart
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Breastplate Armour</td>
+                            <td>14 + Dex modifier</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>20 lb.</td>
+                            <td>400 gp</td>
+                            <td>
+                                <button type="button" class="btn btn-primary addtocart" data-toggle="modal" data-target="#Modal">
+                                    Add to cart
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Half Plate Armour</td>
+                            <td>15 + Dex modifier</td>
+                            <td>13 Str</td>
+                            <td>Disadvantage</td>
+                            <td>40 lb.</td>
+                            <td>750 gp</td>
+                            <td>
+                                <button type="button" class="btn btn-primary addtocart" data-toggle="modal" data-target="#Modal">
+                                    Add to cart
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+    
+                </article>
+
+            </section>
+
+            <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="ModalLabel">Success!</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      You have added this item to your cart.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Undo</button>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        </body>
+    </main>
+
+    <footer class="footer">
+        <div class="text-center py-2 bg-dark">
+            <span class="text-light">Copyright &copy; 2021</span>
+        </div>
+    </footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    
+</body>
+
+</html>

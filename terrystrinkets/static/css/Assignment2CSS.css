@@ -1,0 +1,257 @@
+.customtext1 {
+  font-family: Papyrus, fantasy;
+  font-weight: normal;
+}
+
+.customtext2 {
+  font-family: Papyrus, fantasy;
+  color: black;
+  font-weight: bolder;
+}
+
+.mainheadtext {
+  background-image: url(../Images/scroll1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 1500px 300px;
+  min-width: fit-content;
+  background-position: center;
+  font-family: Curlz MT, fantasy;
+  color: rgb(49, 7, 7);
+  font-weight: normal;
+  border-radius: 25px;
+  border: 3px solid rgba(49, 7, 7, 0.938);
+}
+
+.headingtext {
+  font-family: Papyrus, fantasy;
+  color: rgb(49, 7, 7);
+  font-weight: bolder;
+}
+
+.castcolor:hover {
+  background-color:black;
+  animation-name: cast;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cast {
+  0%   {background-color: rgba(63, 61, 61, 0.89)}
+  50% {background-color: rgba(10, 94, 7, 0.76)}
+  100% {background-color: rgba(63, 61, 61, 0.89)}
+}
+
+.castcolor:hover {
+  background-color:rgba(63, 61, 61, 0.89);
+  animation-name: cast;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.customhero {
+  background-image: url(Images/scroll1.jpg);
+  width: 40vw;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+body {
+  background-image: url(../Images/DND_background_1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.textback {
+  background-image: url(../Images/scroll1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 700px 500px;
+  background-position: center;
+  border-radius: 25px;
+  border: 3px solid rgba(49, 7, 7, 0.89);
+}
+
+.errorback {
+  background-image: url(../Images/scroll1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 1500px 1000px;
+  background-position: center;
+  border-radius: 25px;
+  border: 3px solid rgba(49, 7, 7, 0.89);
+}
+
+.cardback {
+  background-color: white;
+  border-radius: 25px;
+}
+
+.img-thumbnail {
+  background-color: white;
+  min-width: 50px;
+  min-height: 50px;
+  border: none;
+}
+
+.card {
+  padding-top: 100%;
+  min-height: 500px;
+  max-height: fit-content;
+  border: 3px solid rgba(49, 7, 7, 0.89);
+}
+
+.cardborder {
+  border-radius: 5px;
+  border: 10px solid white;
+}
+
+.card-img-top {
+  height: 250px;
+  width: auto;
+  object-position: top;
+}
+
+.cardtextback {
+  background-image: url(../Images/scroll1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 700px 300px;
+  background-position: center;
+  border-radius: 25px;
+  font-weight: bolder;
+}
+
+.zoom {
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+@keyframes link {
+  0%   {color: rgb(49, 7, 7)}
+  50% {color: rgba(179, 30, 55, 0.671)}
+  100% {color: rgb(49, 7, 7)}
+}
+
+.body-link:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.body-link:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration-style: wavy;
+}
+
+.body-link:hover {
+  animation-name: link;
+  background-color: transparent;
+  text-decoration: dotted;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.body-link:active {
+  color: rgba(10, 94, 7, 0.76);
+  background-color: transparent;
+  text-decoration: underline;
+  animation: normal;
+}
+
+td, th, thead {
+  background-image: url(../Images/scroll1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 1000px 150px;
+  background-position: center;
+  border: 3px solid rgba(49, 7, 7, 0.89);
+  vertical-align:middle;
+}
+
+thead {
+  font-size: 120%;
+}
+
+table {
+  max-width:95vw;
+  align-content: center;
+}
+
+@keyframes add {
+  0%   {background-color: rgba(12, 83, 44, 0.836)}
+  100% {background-color: rgba(82, 44, 39, 0.562)}
+}
+
+.addtocart {
+  background-color: rgba(12, 83, 44, 0.836);
+  color: aliceblue;
+}
+
+.addtocart:hover {
+  background-color: rgba(82, 44, 39, 0.562);
+  animation-name: add;
+  animation-duration: 1s;
+  color: aliceblue;
+}
+
+.carousel-inner{
+  height: 50vh;
+  min-height: 300px;
+  min-width: 370px;
+}
+
+.carousel-item{
+  height: 50vh;
+}
+
+.item, .img{
+  min-height: 350px;
+  min-width: 250px;
+}
+
+.textborder {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0px;
+}
+
+.speechbubble {
+  background-image: url(../images/speechbubble1.png);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: left;
+  font-family: Curlz MT, fantasy;
+  color: rgb(49, 7, 7);
+  font-weight: normal;
+}
+
+.scroll-background {
+  background-image: url(../images/scroll2.png);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 700px;
+  background-position: center;
+  font-family: Curlz MT, fantasy;
+  color: rgb(49, 7, 7);
+  font-weight: normal;
+}
+
+.checkout-form {
+  width: 50vw;
+  max-height: 80vh;
+  white-space: nowrap;
+}
+
+#custom-container {
+ min-height: 700px;
+}

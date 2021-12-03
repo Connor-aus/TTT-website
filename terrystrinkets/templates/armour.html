@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<!--Jumbotron for Hero Section -->
+<div class="jumbotron" style="background-image: url(../static/images/DND_shop_2.1.jpg); height: 100vh; min-height: 700px; background-size: cover; background-repeat: no-repeat" alt="background image">
+    <div class="row justify-content-center mt-2">
+        <div class="col-sm-4">
+            <h2 class="text-center px-3 mainheadtext">ARMOURER</h2>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block main %}
+
+     <!-- Contains the main content of the website, divided into sections -->
+
+        <body class="customtext2">
+            <section>
+                <div class="row justify-content-left py-3 pl-4 headingtext" style="max-width: 95vw;">
+                    <h4 class="py-1 px-4 textback">Light Armour</h4>
+                </div>
+                    
+                <div class="textborder">
+                    <div id="myCarousel1" class="carousel slide col-sm-6 textborder" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel1" data-slide-to="1"></li>
+                            <li data-target="#myCarousel1" data-slide-to="2"></li>
+    
+                        </ol>
+                      
+                        <div class="carousel-inner">
+                            {% for product in products if product.subcat == 'Light Armour'%}    
+                            <div class="carousel-item item{% if loop.index == 1 %} active{% endif %}">
+                                <img class="d-block w-50 item img" src="{{url_for('static', filename='images/'+product.image)}}" alt="Slide">
+                                <div class="carousel-caption d-none d-sm-block">
+                                    <h5>{{product.name}}</h5>
+                                    <p>{{product.description}}</p>
+                                </div>
+                            </div>
+                            {% endfor %}    
+                        </div>
+                    </div>
+                </div>
+            
+                <article class="pl-3 pb-5">
+                    <table class="table py-3 text-nowrap">
+                        <thead>
+                            <tr>
+                                <th scope="col">Armour</th>
+                                <th scope="col">Armour Class</th>
+                                <th scope="col">Strength</th>
+                                <th scope="col">Stealth</th>
+                                <th scope="col">Weight</th>
+                                <th scope="col">Cost</th>
+                                <th scope="col">Add to Cart </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for product in products if product.subcat == 'Light Armour'%} 
+                            <tr>
+                                <td scope="row">{{product.name}}</td>
+                                <td>{{product.ac}}</td>
+                                <td>{{product.prereq}}</td>
+                                <td>{{product.stealth}}</td>
+                                <td>{{product.weight}}</td>
+                                <td>{{product.price}} gp</td>
+                                <td>
+                                    <form action="{{ url_for('main.order') }}">
+                                        <input type="hidden" id="product_id" name="product_id" value="{{ product.id }}">
+                                        <input class="btn addtocart" type="submit" value="Add to Basket">
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+    
+                </article>
+
+            </section>
+
+
+
+            <section>
+                <div class="row justify-content-left py-3 pl-4 headingtext" style="max-width: 95vw;">
+                    <h4 class="py-1 px-4 textback">Medium Armour</h4>
+                </div>
+                    
+                <div class="textborder">
+                    <div id="myCarousel2" class="carousel slide col-sm-6 textborder" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel2" data-slide-to="1"></li>
+                            <li data-target="#myCarousel2" data-slide-to="2"></li>
+                            <li data-target="#myCarousel2" data-slide-to="3"></li>
+                            <li data-target="#myCarousel2" data-slide-to="4"></li>
+                        </ol>
+                      
+                        <div class="carousel-inner">
+                            {% for product in products if product.subcat == 'Medium Armour'%}    
+                            <div class="carousel-item item{% if loop.index == 1 %} active{% endif %}">
+                                <img class="d-block w-50 item img" src="{{url_for('static', filename='images/'+product.image)}}" alt="Slide">
+                                <div class="carousel-caption d-none d-sm-block">
+                                    <h5>{{product.name}}</h5>
+                                    <p>{{product.description}}</p>
+                                </div>
+                            </div>
+                            {% endfor %}    
+                        </div>
+                    </div>
+                </div>
+            
+                <article class="pl-3">
+                    <table class="table py-3 text-nowrap">
+                        <thead>
+                            <tr>
+                                <th scope="col">Armour</th>
+                                <th scope="col">Armour Class</th>
+                                <th scope="col">Strength</th>
+                                <th scope="col">Stealth</th>
+                                <th scope="col">Weight</th>
+                                <th scope="col">Cost</th>
+                                <th scope="col">Add to Cart </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for product in products if product.subcat == 'Medium Armour'%} 
+                            <tr>
+                                <td scope="row">{{product.name}}</td>
+                                <td>{{product.ac}}</td>
+                                <td>{{product.prereq}}</td>
+                                <td>{{product.stealth}}</td>
+                                <td>{{product.weight}}</td>
+                                <td>{{product.price}} gp</td>
+                                <td>
+                                    <form action="{{ url_for('main.order') }}">
+                                        <input type="hidden" id="product_id" name="product_id" value="{{ product.id }}">
+                                        <input class="btn addtocart" type="submit" value="Add to Basket">
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %} 
+                        </tbody>
+                    </table>
+    
+                </article>
+
+            </section>
+
+            <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalLabel">Success!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        You have added this item to your cart.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Undo</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                        </div>
+                  </div>
+                </div>
+            </div>
+
+{% endblock %}
